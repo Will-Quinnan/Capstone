@@ -6,7 +6,7 @@ function Catalog(){
         <div className="catalog">
 
             <div className="trip-info">
-
+                {/* import trip-info here */}
             </div>
 
 

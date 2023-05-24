@@ -8,7 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
     return (
       <div className='App'>
-        {/* <Header></Header> */}
+        <Header></Header>
 
         <h1>Hello</h1>
 

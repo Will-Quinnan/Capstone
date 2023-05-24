@@ -1,0 +1,9 @@
+.header {
+    padding: 15px;
+    background-color: rgb(17, 114, 114);
+    align-items: start;
+}
+
+.buttons{
+    font-weight: bold;
+}

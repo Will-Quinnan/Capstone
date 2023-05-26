@@ -1,4 +1,6 @@
 
+import TripInfo from "../components/trip-info";
+
 
 function Catalog(){
 
@@ -6,7 +8,7 @@ function Catalog(){
         <div className="catalog">
 
             <div className="trip-info">
-                {/* import trip-info here */}
+                <TripInfo></TripInfo>
             </div>
 
 
@@ -14,8 +16,10 @@ function Catalog(){
 
                 <div className="filter-tab">
                     {/* add a map that shows pickup location */}
+                    <h1>Map</h1>
                     <div className="filters">
                             {/* import filters here */}
+                            <h2>import filters here</h2>
                     </div>
                 </div>
 

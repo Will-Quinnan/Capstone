@@ -1,0 +1,9 @@
+.drop-off{
+    display: flex;
+    max-width: 50%;
+}
+
+.pick-up{
+    display: flex;
+    max-width: 50%;
+}

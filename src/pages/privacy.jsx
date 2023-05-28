@@ -6,7 +6,7 @@ function Privacy(){
         <div className='container privacy'>
             <h1>Privacy Policy</h1>
             <h3>Effective Date: 05/28/2023</h3>
-            <p>Thank you for visiting our rental car website. At Rentalcar, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, and safeguard the information you provide to us. By using our website, you consent to the terms of this Privacy Policy.</p>
+            <p>Thank you for visiting our rental car website. At Rentalcar.com, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, and safeguard the information you provide to us. By using our website, you consent to the terms of this Privacy Policy.</p>
 
             <h4>1. Types of information Collected</h4>
             <p><b>We may collect the following types of information from you:</b></p>
@@ -51,7 +51,7 @@ function Privacy(){
 
             <h4>11. Contact Information</h4>
             <p>If you have any questions, comments, or concerns about this Privacy Policy or our privacy practices, please contact us at:</p>
-            <p><b>Rentalcar</b></p>
+            <p><b>Rentalcar.com</b></p>
             <p><b>San Diego, California</b></p>
             <p><b>rentalcar@gmail.com</b></p>
             <p><b>(619)621-2121</b></p>

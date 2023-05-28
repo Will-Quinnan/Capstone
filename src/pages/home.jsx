@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./home.css";
 
 function Home() {
@@ -14,7 +13,6 @@ function Home() {
 
 
         <div className="container">
-            {/* needs 5 input fields and a search button */}
             <input class="sep form-control form-control-lg" type="text" placeholder="Pick-up location"/>
             <input class="sep form-control form-control-lg" type="text" placeholder="Pick-up date"/>
             <input class="sep form-control form-control-lg" type="text" placeholder="Time"/>

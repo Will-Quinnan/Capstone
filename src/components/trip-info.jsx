@@ -1,19 +1,18 @@
+import './trip-info.css';
 
 function TripInfo(){
 
     return (
         <div className="trip-info">
 
-            <div>
-                <h5>Pick up</h5>
+            <div class="pick-up">
                 
 
-                <div class="mb-3">
-                    <label class="form-label">Pick Up Date:</label>
+                <div class="trip-date">
                     <input type="date" id="pickup" name="pickup"></input>
                 </div>
 
-                <div class="mb-3">
+                <div class="trip-location">
                     <label class="form-label">Pick Up location:</label>
                         <select class="form-control" id="textService">
                             <option value="" disabled selected>--Select location--</option>
@@ -24,15 +23,14 @@ function TripInfo(){
                 </div>
             </div>    
 
-            <div>
-                <h5>Drop off</h5>
+            <div className="pick-up">
+            
                 
-                <div class="mb-3">
-                    <label class="form-label">Drop Off Date:</label>
+                <div class="trip-date">
                     <input type="date" id="dropoff" name="dropoff"></input>
                 </div>
 
-                <div class="mb-3">
+                <div class="trip-location">
                     <label class="form-label">Drop off location:</label>
                         <select class="form-control" id="textService">
                             <option value="" disabled selected>--Select location--</option>

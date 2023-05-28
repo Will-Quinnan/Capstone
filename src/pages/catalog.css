@@ -1,0 +1,20 @@
+.catalog{
+    display: block;
+}
+
+.catalog-body{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+.filter-tab{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    border: solid black 1px;
+}
+.catalog-products{
+    display:flex;
+    flex-direction: column;
+    width: 70%;
+}

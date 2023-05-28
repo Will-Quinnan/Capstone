@@ -1,5 +1,6 @@
 import "./home.css";
 
+
 function Home() {
 
     return (
@@ -18,7 +19,10 @@ function Home() {
             <input class="sep form-control form-control-lg" type="text" placeholder="Time"/>
             <input class="sep form-control form-control-lg" type="text" placeholder="Drop-off date"/>
             <input class="sep form-control form-control-lg" type="text" placeholder="Time"/>
-            <button className="sep btn btn-success">Search</button>
+            
+
+            {/* adding link for navigation until search funtionality is implimented */}
+            <Link className="btn btn-success" to="/catalog">Search</Link>
         </div>
 
     </div>

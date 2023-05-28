@@ -1,0 +1,39 @@
+.trip-info{
+    display: flex;
+    flex-direction: row;
+    height: 120px;
+    width: 100%;
+    justify-content: center;
+}
+
+
+
+.drop-off{
+    display: flex;
+    max-width: 50%;
+    border: solid black 1px;
+    width: fit-content;
+}
+
+.pick-up{
+    display: flex;
+    max-width: 50%;
+    border: solid black 1px;
+    width: fit-content;
+}
+
+.trip-date{
+    font-size: 16px;
+    display: flex;
+    width:30%;
+    height: fit-content;
+    margin-left: 10px;
+}
+
+.form-control{
+    margin: 2px;
+}
+
+.form-label{
+    font-size: 16px;
+}

@@ -22,7 +22,7 @@ function Home() {
             
 
             {/* adding link for navigation until search funtionality is implimented */}
-            <Link className="btn btn-success" to="/catalog">Search</Link>
+            <Link className="btn btn-success sep" to="/catalog">Search</Link>
         </div>
 
     </div>

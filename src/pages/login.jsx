@@ -27,6 +27,7 @@ function Login() {
             </div>  
 
             <nav>
+                {/* adding link for navigation until book funtionality is implimented */}
                 <Link className="btn btn-secondary button-booking" to="/yourOrders">Find your booking</Link>
             </nav>
 

@@ -1,7 +1,13 @@
 import "./home.css";
 import { Link } from 'react-router-dom'
+import DataService from "../services/dataService";
 
 function Home() {
+
+    function loadCatalog(){
+        let service = new DataService();
+        service.getProducts();
+    }
 
     return (
     <div className = "home">
@@ -20,9 +26,11 @@ function Home() {
             <input class="sep form-control form-control-lg" type="text" placeholder="Drop-off date"/>
             <input class="sep form-control form-control-lg" type="text" placeholder="Time"/>
             
-
+            {/* Testing that react has communication with flask */}
+            <button className="btn btn-success sep" onClick={loadCatalog}>Search</button>
+            
             {/* adding link for navigation until search funtionality is implimented */}
-            <Link className="btn btn-success sep" to="/catalog">Search</Link>
+            {/* <Link className="btn btn-success sep" to="/catalog">Search</Link> */}
         </div>
 
     </div>

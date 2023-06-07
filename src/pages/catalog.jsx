@@ -1,9 +1,25 @@
-
+import { useEffect, useState } from "react";
 import TripInfo from "../components/trip-info";
 import './catalog.css';
+import Product from "../components/product";
+import DataService from "../sevices/dataServiceTest";
 
 
 function Catalog(){
+    const [products, setProducts] = useState([]);
+
+    useEffect(function() {
+        console.log("component loaded");
+        loadCatalog();
+    },[]);
+
+
+    function loadCatalog() {
+        let service = new DataService();
+        let prods = service.getProducts();
+        console.log(prods);
+        setProducts(prods);
+    }
 
     return (
         <div className="catalog">
@@ -34,7 +50,8 @@ function Catalog(){
                     </div>
 
                     <div className="import-product">
-                        <h3>import produts</h3>
+
+                        {products.map( p => <Product></Product>)}
                     {/* import products to this location */}
                     </div>
                 </div>

@@ -1,0 +1,73 @@
+.product{
+    display: inline-block;
+    margin: 10px 15px;
+    padding: 20px;
+    border: 1px solid black;
+
+    width: 90%;
+    height: 200px;
+    background-color: rgba(241, 241, 241, 0.562);
+    vertical-align: top;
+
+}
+.product img{
+    width: 200px;
+    
+    border-radius: 40%;
+}
+.product:hover{
+    border: 1.5px solid rgb(117, 117, 255);
+    background-color: rgb(241, 241, 241);;
+}
+.product .prices{
+    display: flex;
+}
+.product .prices label{
+    flex: 1;
+}
+.product button{
+    margin-top: 20px;
+}
+.addbtn {
+    background: #4c92b0;
+    background-image: -webkit-linear-gradient(top, #4c92b0, #b3cfe0);
+    background-image: -moz-linear-gradient(top, #4c92b0, #b3cfe0);
+    background-image: -ms-linear-gradient(top, #4c92b0, #b3cfe0);
+    background-image: -o-linear-gradient(top, #4c92b0, #b3cfe0);
+    background-image: linear-gradient(to bottom, #4c92b0, #b3cfe0);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Georgia;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .addbtn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+  }
+
+  .product img {
+    height: 150px;
+  }
+
+  @media (max-width: 400px){
+    .product{
+        width:80%;
+        margin-left: 5%;
+        height: auto;
+    }
+    .product img {
+        width: 90%;
+        height: auto;
+        max-height: 500px;
+    }
+  }

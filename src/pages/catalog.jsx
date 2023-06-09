@@ -51,7 +51,7 @@ function Catalog(){
 
                     <div className="import-product">
 
-                        {products.map( p => <Product></Product>)}
+                        {products.map( p => <Product data={p}></Product>)}
                     {/* import products to this location */}
                     </div>
                 </div>

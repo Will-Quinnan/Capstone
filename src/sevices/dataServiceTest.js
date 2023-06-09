@@ -49,7 +49,7 @@ var catalog = [
         "drive": "4-wheel drive",
         "seats": 8,
         "image": "2020 toyota sequoia.webp",
-        "price": 103.99
+        "price": 109.99
     },
     {
         "make": "Chevrolet",
@@ -81,6 +81,46 @@ var catalog = [
         "image": "2020 volkswagen jetta.jpg",
         "price": 54.99
     },
+    {
+        "make": "Toyota",
+        "model": "Yaris",
+        "year": "2021",
+        "color": "gray",
+        "drive": "manual",
+        "seats": 5,
+        "image": "2021 toyota yaris.jpg",
+        "price": 54.99
+    },
+    {
+        "make": "Chevrolet",
+        "model": "Malibu",
+        "year": "2020",
+        "color": "gray",
+        "drive": "4-whee drive",
+        "seats": 5,
+        "image": "2020 chevrolet malibu.webp",
+        "price": 59.99
+    },
+    {
+        "make": "Toyota",
+        "model": "Tacoma",
+        "year": "2020",
+        "color": "black",
+        "drive": "4-whee drive",
+        "seats": 5,
+        "image": "2020 toyota tacoma.jpg",
+        "price": 79.99
+    }, 
+    {
+        "make": "Nissan",
+        "model": "Frontier",
+        "year": "2020",
+        "color": "orange",
+        "drive": "4-whee drive",
+        "seats": 5,
+        "image": "2020 nissan frontier.jpg",
+        "price": 59.99
+    },           
 
 ];
 

@@ -20,7 +20,7 @@ function Product(props) {
         <div className="info">
             
             <div>
-                <img src={"/images/"+ props.data.image} alt="car" />
+                <img src={"/images/"+ props.data.image} className="" alt="car" />
             </div>
 
             <div>

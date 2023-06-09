@@ -1,14 +1,22 @@
 .product{
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     margin: 10px 15px;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid black;
 
     width: 90%;
-    height: 200px;
+    height: fit-content;
     background-color: rgba(241, 241, 241, 0.562);
     vertical-align: top;
 
+}
+.product .info{
+    display: flex;
+    flex-direction: row;
+}
+.product .link{
+    
 }
 .product img{
     width: 200px;

@@ -25,6 +25,8 @@ function Product(props) {
 
             <div>
                 <h7>This vehicle  has a {props.data.drive} and {props.data.seats} seats.</h7>
+                
+                <h4>${props.data.price} per day</h4>
             </div>
 
         </div>

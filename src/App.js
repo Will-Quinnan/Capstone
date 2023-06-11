@@ -9,6 +9,7 @@ import About from './pages/about';
 import Help from './pages/help';
 import Catalog from './pages/catalog';
 import YourOrder from './pages/yourOrders';
+import Checkout from './pages/checkout';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
@@ -28,6 +29,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/help" element={<Help />} />
             <Route path="/yourOrders" element={<YourOrder />} />
+            <Route path="/checkout" element={<Checkout />} />
 
           </Routes>
 

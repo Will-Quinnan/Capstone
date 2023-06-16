@@ -27,10 +27,10 @@ function Home() {
             <input class="sep form-control form-control-lg" type="text" placeholder="Time"/>
             
             {/* Testing that react has communication with flask */}
-            <button className="btn btn-success sep" onClick={loadCatalog}>Search</button>
+            {/* <button className="btn btn-success sep" onClick={loadCatalog}>Search</button> */}
             
             {/* adding link for navigation until search funtionality is implimented */}
-            {/* <Link className="btn btn-success sep" to="/catalog">Search</Link> */}
+            <Link className="btn btn-success sep" to="/catalog">Search</Link>
         </div>
 
     </div>

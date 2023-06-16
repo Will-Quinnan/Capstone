@@ -3,6 +3,7 @@ import TripInfo from "../components/trip-info";
 import './catalog.css';
 import Product from "../components/product";
 import DataService from "../sevices/dataServiceTest";
+import Filters from "../components/filters";
 
 
 function Catalog(){
@@ -36,7 +37,7 @@ function Catalog(){
                     <h1>Map</h1>
                     <div className="filters">
                             {/* import filters here */}
-                            <h2>import filters here</h2>
+                            <Filters></Filters>
                     </div>
                 </div>
 

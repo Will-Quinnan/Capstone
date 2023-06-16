@@ -1,0 +1,21 @@
+.filters{
+    display: flex;
+    flex-direction: column;
+}
+.filter-type{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 25%;
+    margin-bottom: 20px;
+
+}
+
+.filter{
+    font-size: smaller;
+    margin-left: 15%;
+    
+}
+.filters h3{
+    margin-left: -35%;
+}

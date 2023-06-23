@@ -1,4 +1,4 @@
-
+import axios from "axios";
 
 var catalog = [
     {
@@ -126,18 +126,18 @@ var catalog = [
 
 class DataService {
 
-    getProducts(){
-        // let response = await axios.get("http://127.0.0.1:5000/api/catalog");
+    async getProducts(){
+        let response = await axios.get("http://127.0.0.1:5000/api/catalog");
 
-        // return response.data;
+        return response.data;
 
-        return catalog;
+        // return catalog;
     }
 
-    // async saveProduct(product) {
-    //     let response = await axios.post("http://127.0.0.1:5000/api/catalog", product);
-    //     return response.data;
-    // }
+    async saveProduct(product) {
+        let response = await axios.post("http://127.0.0.1:5000/api/catalog", product);
+        return response.data;
+    }
 
 }
 

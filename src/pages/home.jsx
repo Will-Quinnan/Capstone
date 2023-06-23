@@ -12,26 +12,7 @@ function Home() {
     return (
     <div className = "home">
 
-        <div className="site-info">
-            <h1>Car Rental - Search, Compare & Book</h1>
-            <h4>Free cancelation</h4>
-            <h4>Customer support</h4>
-        </div>
 
-
-        <div className="container">
-            <input class="sep form-control form-control-lg" type="text" placeholder="Pick-up location"/>
-            <input class="sep form-control form-control-lg" type="text" placeholder="Pick-up date"/>
-            <input class="sep form-control form-control-lg" type="text" placeholder="Time"/>
-            <input class="sep form-control form-control-lg" type="text" placeholder="Drop-off date"/>
-            <input class="sep form-control form-control-lg" type="text" placeholder="Time"/>
-            
-            {/* Testing that react has communication with flask */}
-            {/* <button className="btn btn-success sep" onClick={loadCatalog}>Search</button> */}
-            
-            {/* adding link for navigation until search funtionality is implimented */}
-            <Link className="btn btn-success sep p-3" to="/catalog">Search</Link>
-        </div>
 
     </div>
     );

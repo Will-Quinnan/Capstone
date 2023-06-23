@@ -1,6 +1,8 @@
 import "./home.css";
 import { Link } from 'react-router-dom'
 import DataService from "../services/dataService";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheck, faMagnifyingGlass, faCalendarDays, faClock } from '@fortawesome/free-solid-svg-icons'
 
 function Home() {
 

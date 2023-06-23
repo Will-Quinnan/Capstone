@@ -1,9 +1,11 @@
 .header {
     padding: 15px;
-    background-color: rgb(56, 182, 182);
-    align-items: start;
+    background-color: #1879CA;
 }
 
-.buttons{
-    font-weight: bold;
+.logo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font: 600;
+    font-size: x-large;
+    color: white;
 }

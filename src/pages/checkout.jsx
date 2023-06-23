@@ -1,9 +1,14 @@
 
+
+
 function Checkout() {
+
+
     return (
         <div className="checkout">
             <div className="vehical-image">
                 {/* add image here of selected product */}
+                
             </div>
 
             <div className="vehical-description">
@@ -44,3 +49,5 @@ function Checkout() {
 
     )
 }
+
+export default Checkout;

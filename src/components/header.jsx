@@ -7,8 +7,8 @@ function Heading(){
     return (
         <div className="header">
             <nav>
-                <Link className="btn" to="/">Rentalcars.com</Link>
-                <Link className="btn btn-success" to="/login">Manage booking</Link>
+                <Link className="navbar-brand logo pe-5 me-5" to="/">Rentalcars.com</Link>
+                <Link className="btn btn-success ms-5" to="/login">Manage booking</Link>
             </nav>
         </div>
     );

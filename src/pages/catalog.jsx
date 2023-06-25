@@ -8,6 +8,7 @@ import Filters from "../components/filters";
 
 function Catalog(){
     const [products, setProducts] = useState([]);
+    const [prodsToDisplay, setProdsToDisplay] = useState([]);
 
     useEffect(function() {
         console.log("component loaded");
@@ -15,11 +16,29 @@ function Catalog(){
     },[]);
 
 
-    function loadCatalog() {
+    async function loadCatalog() {
         let service = new DataService();
-        let prods = service.getProducts();
+        let prods = await service.getProducts();
         console.log(prods);
         setProducts(prods);
+        setProdsToDisplay(prods);
+    }
+
+    function onYearChange(year) {
+        if(year == "All")  {
+            setProdsToDisplay(products); // no filter, display all
+            return;
+        }
+
+        setProdsToDisplay(products.filter(p => p.year == year));
+    }
+
+    function onMakeChange(make) {
+        setProdsToDisplay(products.filter(p => p.make == make));
+    }
+
+    function onSeatsChange(seats) {
+        setProdsToDisplay(products.filter(p => p.seats == seats));
     }
 
     return (
@@ -37,7 +56,7 @@ function Catalog(){
                     <h1>Map</h1>
                     <div className="filters">
                             {/* import filters here */}
-                            <Filters></Filters>
+                            <Filters onYearChange={onYearChange} onMakeChange={onMakeChange} onSeatsChange={onSeatsChange}></Filters>
                     </div>
                 </div>
 
@@ -52,7 +71,7 @@ function Catalog(){
 
                     <div className="import-product">
 
-                        {products.map( p => <Product data={p}></Product>)}
+                        {prodsToDisplay.map( p => <Product key={p._id} data={p}></Product>)}
                     {/* import products to this location */}
                     </div>
                 </div>

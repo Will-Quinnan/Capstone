@@ -28,35 +28,97 @@ function Home() {
                     <div className="icon">
                         <FontAwesomeIcon icon={faMagnifyingGlass} />
                     </div>
-                    <input class="sep form-control form-control-lg input ps-5" type="text" placeholder="Pick-up location"/>
+                    {/* <input class="sep form-control form-control-lg input ps-5" type="text" placeholder="Pick-up location"/> */}
+                    <select class="sep form-select form-select-lg input ps-5" aria-label="Default select example">
+                        <option selected>Pick-up location</option>
+                        <option value="dealership">Dealership</option>
+                        <option value="airport">San Diego Airport</option>
+                    </select>
                 </div>
 
                 <div className="wrapper pb-1">
-                    <div className="icon">
+                    {/* <div className="icon">
                         <FontAwesomeIcon icon={faCalendarDays} />
-                    </div>
-                    <input class="sep form-control form-control-lg input ps-5" type="text" placeholder="Pick-up date"/>
+                    </div> */}
+                    <label htmlFor="">Date Pick-up</label>
+                    <input class="sep form-control form-control-lg input ps-5" type="date" placeholder="Pick-up date"/>
                 </div>
 
                 <div className="wrapper pb-1">
                     <div className="icon">
                         <FontAwesomeIcon icon={faClock} />
                     </div>
-                    <input class="sep form-control form-control-lg input ps-5" type="text" placeholder="Time"/>
+
+                    {/* <input class="sep form-control form-control-lg input ps-5" type="text" placeholder="Time"/> */}
+                    <select class="sep form-select form-select-lg input ps-5" aria-label="Default select example" id="floatingInput">
+                        <option selected>Time Pick-up</option>
+                        <option value="12 am">00:00</option>
+                        <option value="1 am">01:00</option>
+                        <option value="2 am">02:00</option>
+                        <option value="3 am">03:00</option>
+                        <option value="4 am">04:00</option>
+                        <option value="5 am">05:00</option>
+                        <option value="6 am">06:00</option>
+                        <option value="7 am">07:00</option>
+                        <option value="8 am">08:00</option>
+                        <option value="9 am">09:00</option>
+                        <option value="10 am">10:00</option>
+                        <option value="11 am">11:00</option>
+                        <option value="12 pm">12:00</option>
+                        <option value="1 pm">13:00</option>
+                        <option value="2 pm">14:00</option>
+                        <option value="3 pm">15:00</option>
+                        <option value="4 pm">16:00</option>
+                        <option value="5 pm">17:00</option>
+                        <option value="6 pm">18:00</option>
+                        <option value="7 pm">19:00</option>
+                        <option value="8 pm">20:00</option>
+                        <option value="9 pm">21:00</option>
+                        <option value="10 pm">22:00</option>
+                        <option value="11 pm">23:00</option>
+                    </select>
+
                 </div>
 
                 <div className="wrapper pb-1">
-                    <div className="icon">
+                    {/* <div className="icon">
                         <FontAwesomeIcon icon={faCalendarDays} />
-                    </div>
-                    <input class="sep form-control form-control-lg input ps-5" type="text" placeholder="Drop-off date"/>
+                    </div> */}
+                    <input class="sep form-control form-control-lg input ps-5" type="date" placeholder="Drop-off date"/>
                 </div>
 
                 <div className="wrapper pb-1">
                     <div className="icon">
                         <FontAwesomeIcon icon={faClock} />
                     </div>
-                    <input class="sep form-control form-control-lg input ps-5" type="text" placeholder="Time"/>
+                    {/* <input class="sep form-control form-control-lg input ps-5" type="text" placeholder="Time"/> */}
+                    <select class="sep form-select form-select-lg input ps-5" aria-label="Default select example" id="floatingInput">
+                        <option selected>Time Drop-off</option>
+                        <option value="12 am">00:00</option>
+                        <option value="1 am">01:00</option>
+                        <option value="2 am">02:00</option>
+                        <option value="3 am">03:00</option>
+                        <option value="4 am">04:00</option>
+                        <option value="5 am">05:00</option>
+                        <option value="6 am">06:00</option>
+                        <option value="7 am">07:00</option>
+                        <option value="8 am">08:00</option>
+                        <option value="9 am">09:00</option>
+                        <option value="10 am">10:00</option>
+                        <option value="11 am">11:00</option>
+                        <option value="12 pm">12:00</option>
+                        <option value="1 pm">13:00</option>
+                        <option value="2 pm">14:00</option>
+                        <option value="3 pm">15:00</option>
+                        <option value="4 pm">16:00</option>
+                        <option value="5 pm">17:00</option>
+                        <option value="6 pm">18:00</option>
+                        <option value="7 pm">19:00</option>
+                        <option value="8 pm">20:00</option>
+                        <option value="9 pm">21:00</option>
+                        <option value="10 pm">22:00</option>
+                        <option value="11 pm">23:00</option>
+                    </select>
                 </div>
                 
                 {/* Testing that react has communication with flask */}
@@ -64,7 +126,7 @@ function Home() {
             
                 {/* adding link for navigation until search funtionality is implimented */}
                 <Link className="btn btn-success sep p-3" to="/catalog">Search</Link>
-                
+
             </div>
             
         </div>

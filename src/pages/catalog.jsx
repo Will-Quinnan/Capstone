@@ -53,7 +53,7 @@ function Catalog(){
 
                 <div className="filter-tab">
                     {/* add a map that shows pickup location */}
-                    <h1>Map</h1>
+                    
                     <div className="filters">
                             {/* import filters here */}
                             <Filters onYearChange={onYearChange} onMakeChange={onMakeChange} onSeatsChange={onSeatsChange}></Filters>
@@ -66,7 +66,7 @@ function Catalog(){
 
                     <div className="sort-by">
                     {/* add a toggle function that allows the user to sort the vehicals by price high to low, or low to high */}
-                    <h3>sort by</h3>
+                    <h3>Vehicles</h3>
                     </div>
 
                     <div className="import-product">

@@ -3,10 +3,12 @@ import StoreContext from "./storeContext";
 
 const GlobalState = (props) => {
     const [cart, setCart] = useState([]);
+    const [searchInfo, setSearchInfo] = useState({});
     const [user, setUser] = useState({ id: 1234, name: "Brayan", email: "test@gmail.com" });
 
     const addInfo = (info) => {
         console.log(info);
+        setSearchInfo(info);
     };
 
     const removeFromCart = () => {
@@ -18,6 +20,7 @@ const GlobalState = (props) => {
             value={{
                 cart: cart,
                 user: user,
+                searchInfo: searchInfo,
                 addInfo: addInfo,
                 removeFromCart: removeFromCart, 
             }}

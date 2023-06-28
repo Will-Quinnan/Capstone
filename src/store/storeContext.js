@@ -2,8 +2,9 @@ import { createContext } from "react";
 
 const StoreContext = createContext({
     cart: [],
+    searchInfo: {},
     user: {},
-    addToCart: () => {},
+    addInfo: () => {},
     removeFromCart: () => {}
 });
 

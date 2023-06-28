@@ -12,36 +12,40 @@ import YourOrder from './pages/yourOrders';
 import Checkout from './pages/checkout';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import GlobalState from './store/globalState';
 
 function App() {
     return (
-      <div className='App'>
+      <GlobalState>
 
-        <Router>
-          <Header />
+      
+        <div className='App'>
 
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/catalog" element= {<Catalog />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/terms" element={<Terms />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/help" element={<Help />} />
-            <Route path="/yourOrders" element={<YourOrder />} />
-            <Route path="/checkout" element={<Checkout />} />
+          <Router>
+            <Header />
 
-          </Routes>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/catalog" element= {<Catalog />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/help" element={<Help />} />
+              <Route path="/yourOrders" element={<YourOrder />} />
+              <Route path="/checkout" element={<Checkout />} />
 
-          <Footer />
+            </Routes>
 
-        </Router>
+            <Footer />
+
+          </Router>
 
 
 
 
-      </div>
-
+        </div>
+      </GlobalState>
     );
 }
 

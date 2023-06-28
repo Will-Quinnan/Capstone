@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom'
 import DataService from "../services/dataService";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faMagnifyingGlass, faCalendarDays, faClock } from '@fortawesome/free-solid-svg-icons'
-import { useState } from "react";
+import { useContext } from "react";
+import StoreContext from "../store/storeContext";
 
 function Home() {
-    const[value, setValue] = useState('');
+    const addToCart = useContext(StoreContext).addToCart;
 
-    function search(event){
-        setValue(event.target.value)
-        console.log(value)
-    }
+    const Search = () => {
+        addToCart();
+    };
 
     function loadCatalog(){
         let service = new DataService();
@@ -35,7 +35,7 @@ function Home() {
                     <div className="icon">
                         <FontAwesomeIcon icon={faMagnifyingGlass} />
                     </div>
-                    <select class="sep form-select form-select-lg input ps-5" aria-label="Default select example" onChange={search}>
+                    <select class="sep form-select form-select-lg input ps-5" aria-label="Default select example">
                         <option selected>Pick-up location</option>
                         <option value="dealership">Dealership</option>
                         <option value="airport">San Diego Airport</option>
@@ -44,14 +44,14 @@ function Home() {
 
                 <div className="position-relative wrapper pb-1">
                     <label htmlFor="" className="position-absolute start-0 ps-5">Date Pick-up</label>
-                    <input class="sep form-control form-control-lg input ps-5" type="date" placeholder="Pick-up date" onChange={search}/>
+                    <input class="sep form-control form-control-lg input ps-5" type="date" placeholder="Pick-up date"/>
                 </div>
 
                 <div className="wrapper pb-1">
                     <div className="icon">
                         <FontAwesomeIcon icon={faClock} />
                     </div>
-                    <select class="sep form-select form-select-lg input ps-5" aria-label="Default select example" id="floatingInput" onChange={search}>
+                    <select class="sep form-select form-select-lg input ps-5" aria-label="Default select example" id="floatingInput">
                         <option selected>Time Pick-up</option>
                         <option value="12 am">00:00</option>
                         <option value="1 am">01:00</option>
@@ -83,14 +83,14 @@ function Home() {
 
                 <div className="position-relative wrapper pb-1">
                     <label htmlFor="" className="position-absolute start-0 ps-5">Date Drop-off</label>
-                    <input class="sep form-control form-control-lg input ps-5" type="date" placeholder="Drop-off date" onChange={search}/>
+                    <input class="sep form-control form-control-lg input ps-5" type="date" placeholder="Drop-off date"/>
                 </div>
 
                 <div className="wrapper pb-1">
                     <div className="icon">
                         <FontAwesomeIcon icon={faClock} />
                     </div>
-                    <select class="sep form-select form-select-lg input ps-5" aria-label="Default select example" id="floatingInput" onChange={search}>
+                    <select class="sep form-select form-select-lg input ps-5" aria-label="Default select example" id="floatingInput">
                         <option selected>Time Drop-off</option>
                         <option value="12 am">00:00</option>
                         <option value="1 am">01:00</option>
@@ -123,6 +123,7 @@ function Home() {
                 {/* <button className="btn btn-success sep" onClick={loadCatalog}>Search</button> */}
             
                 {/* adding link for navigation until search funtionality is implimented */}
+                <button onClick={Search}>search</button>
                 <Link className="btn btn-success sep p-3" to="/catalog">Search</Link>
 
             </div>

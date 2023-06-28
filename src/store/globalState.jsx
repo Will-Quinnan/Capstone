@@ -5,11 +5,8 @@ const GlobalState = (props) => {
     const [cart, setCart] = useState([]);
     const [user, setUser] = useState({ id: 1234, name: "Brayan", email: "test@gmail.com" });
 
-    const addToCart = (product) => {
-        let copy = [...cart];
-        copy.push(product);
-        setCart(copy);
-        console.log(cart);
+    const addInfo = (info) => {
+        console.log(info);
     };
 
     const removeFromCart = () => {
@@ -20,7 +17,9 @@ const GlobalState = (props) => {
         <StoreContext.Provider 
             value={{
                 cart: cart,
-                user: user, 
+                user: user,
+                addInfo: addInfo,
+                removeFromCart: removeFromCart, 
             }}
         >
             {props.children}

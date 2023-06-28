@@ -15,7 +15,7 @@ function Product(props) {
     <div className='product'>
         
         
-        <h5>{props.data.year} {props.data.make} {props.data.model}</h5>
+        <h4>{props.data.year} {props.data.make} {props.data.model}</h4>
         
         <div className="info">
             
@@ -24,9 +24,13 @@ function Product(props) {
             </div>
 
             <div>
-                <h5>This vehicle  has a {props.data.drive} and {props.data.seats} seats.</h5>
+                <p>This vehicle  has a {props.data.drive} and {props.data.seats} seats.</p>
                 
-                <h4>${props.data.price} per day</h4>
+                <div className="price" >
+                    <h5 id="product-price">${props.data.price}</h5>
+                    <p>per day</p>
+                    </div>
+                
             </div>
 
         </div>

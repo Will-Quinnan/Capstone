@@ -7,16 +7,25 @@
 
     width: 90%;
     height: fit-content;
-    background-color: rgba(241, 241, 241, 0.562);
+    background-color: rgba(182, 182, 182, 0.247);
     vertical-align: top;
 
+}
+ .product h5{
+    color: rgba(28, 28, 255, 0.856);
+    
+}
+.product .price{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+#product-price{
+    margin-right: 10px;
 }
 .product .info{
     display: flex;
     flex-direction: row;
-}
-.product .link{
-    
 }
 .product img{
     width: 200px;
@@ -36,32 +45,6 @@
 .product button{
     margin-top: 20px;
 }
-.addbtn {
-    background: #4c92b0;
-    background-image: -webkit-linear-gradient(top, #4c92b0, #b3cfe0);
-    background-image: -moz-linear-gradient(top, #4c92b0, #b3cfe0);
-    background-image: -ms-linear-gradient(top, #4c92b0, #b3cfe0);
-    background-image: -o-linear-gradient(top, #4c92b0, #b3cfe0);
-    background-image: linear-gradient(to bottom, #4c92b0, #b3cfe0);
-    -webkit-border-radius: 28;
-    -moz-border-radius: 28;
-    border-radius: 28px;
-    font-family: Georgia;
-    color: #ffffff;
-    font-size: 20px;
-    padding: 10px 20px 10px 20px;
-    text-decoration: none;
-  }
-  
-  .addbtn:hover {
-    background: #3cb0fd;
-    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
-    text-decoration: none;
-  }
 
   .product img {
     height: 150px;

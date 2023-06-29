@@ -1,11 +1,14 @@
 import { createContext } from "react";
 
 const StoreContext = createContext({
-    cart: [],
+    car: {},
     searchInfo: {},
     user: {},
+    checkOut: {},
+    carSpecs: () => {},
     addInfo: () => {},
-    removeFromCart: () => {}
+    userInfo: () => {},
+    checkOutInfo: () => {}
 });
 
 export default StoreContext;

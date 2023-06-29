@@ -2,27 +2,40 @@ import { useState } from "react";
 import StoreContext from "./storeContext";
 
 const GlobalState = (props) => {
-    const [cart, setCart] = useState([]);
+    const [car, setCar] = useState({});
     const [searchInfo, setSearchInfo] = useState({});
-    const [user, setUser] = useState({ id: 1234, name: "Brayan", email: "test@gmail.com" });
+    const [user, setUser] = useState({})
+    const [checkOut, setCheckOut] = useState({});
 
     const addInfo = (info) => {
-        console.log(info);
         setSearchInfo(info);
+        console.log(searchInfo)
     };
 
-    const removeFromCart = () => {
-        console.log("Global fn - remove");
+    const carSpecs = (info) => {
+        setCar(info);
+    };
+
+    const userInfo = (info) => {
+        setUser(info);
+        console.log(user);
+    };
+
+    const checkOutInfo = () => {
+
     };
 
     return(
         <StoreContext.Provider 
             value={{
-                cart: cart,
-                user: user,
+                car: car,
                 searchInfo: searchInfo,
+                user: user,
+                checkOut: checkOut,
                 addInfo: addInfo,
-                removeFromCart: removeFromCart, 
+                carSpecs: carSpecs, 
+                userInfo: userInfo,
+                checkOutInfo: checkOutInfo
             }}
         >
             {props.children}

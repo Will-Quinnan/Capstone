@@ -1,7 +1,6 @@
 import { useContext, useState } from 'react';
 import './trip-info.css';
 import StoreContext from '../store/storeContext';
-import GlobalState from '../store/globalState';
 
 
 function TripInfo(){

@@ -14,8 +14,32 @@ function Checkout() {
         userInfo(user);
     };
 
+
+    function tripDuration(){
+
+    };
+
+    function priceCalc(){
+
+    };
+
+    function insurCalc(){
+
+    };
+
+    function taxCalc(){
+
+    };
+
+    function totalPrice(){
+
+    };
+    
+    
+
     return (
         <div className="checkout">
+            <div className="product-box">
             <div className="vehical-image">
                 {/* add image here of selected product */}
                 <img src={"/images/"+ car.data.image} alt="car" />
@@ -23,15 +47,44 @@ function Checkout() {
 
             <div className="vehical-description">
                 {/* add selected product description and name here */}
-                <p>Drive: {car.data.drive}</p>
-                <p>Make: {car.data.make}</p>
-                <p>Model: {car.data.model}</p>
-                <p>Year: {car.data.year}</p>
-                <p>Seats: {car.data.seats}</p>
-                <p>Color: {car.data.color}</p>
-                <p>Price: ${car.data.price} a day</p>
+                <div>
+                    <h3>Product info:</h3>
+                </div>
+
+                <div className="sections">
+                <div className="section">
+                    <div className="info">
+                        <h5>Year:</h5> <p>{car.data.year}</p>
+                    </div>
+                    <div className="info">
+                        <h5>Make:</h5> <p>{car.data.make}</p>
+                    </div>
+                    <div className="info">
+                        <h5>Model:</h5> <p>{car.data.model}</p>
+                    </div>
+
+                </div>
+                <div className="section">
+                    <div className="info">
+                        <h5>Drive:</h5> <p>{car.data.drive}</p>
+                    </div>
+                    <div className="info">
+                        <h5>Seats:</h5> <p>{car.data.seats}</p>
+                    </div>
+                    <div className="info">
+                        <h5>Color:</h5> <p>{car.data.color}</p>
+                    </div>
+                    <div className="info">
+                        <h5>Price:</h5> <p>${car.data.price} a day</p>
+                    </div>
+                </div>
+                </div>
+
+
 
             </div>
+            </div>
+
 
             <div className="order-info">
 
@@ -42,11 +95,20 @@ function Checkout() {
                     </div>
 
                     <div className="price-breakdown">
-                        {/* add breakdown of product price including all fees */}
+                        <div className="info-price">
+                        <p><u>Price for # days:</u> ${car.data.price}</p>
+                        </div>
+                        <div className="info-price">
+                        <p><u>Insurance fees:</u> $###</p>
+                        </div>
+                        <div className="info-price">
+                        <p><u>tax:</u> $###</p>
+                        </div>
                     </div>
 
                     <div className="outer-layer">
                         <h3>Total Price:</h3> 
+                        <p>$###</p>
                         {/* add total price of order */}
                     </div>
 

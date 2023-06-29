@@ -1,0 +1,47 @@
+.checkout{
+    display: flex;
+    flex-direction: row;
+}
+
+.product-box{
+    margin: 15px;
+}
+
+.order-info{
+    border: black 2px solid;
+    width: 300px; 
+    margin-left: 100px;
+
+}
+
+
+
+
+
+.checkout .price-box .outer-layer{
+    background-color: rgb(0, 81, 255);
+    color: aliceblue;
+    padding: 5px;
+}
+.checkout .price-box .price-breakdown{
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    
+}
+
+
+
+
+
+.checkout .email{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+.checkout .email input{
+    width: 70%;
+    
+}

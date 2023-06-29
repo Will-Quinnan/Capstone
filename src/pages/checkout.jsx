@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import StoreContext from "../store/storeContext";
+import './checkout.css';
 
 
 
@@ -22,13 +23,13 @@ function Checkout() {
 
             <div className="vehical-description">
                 {/* add selected product description and name here */}
-                <h3>Drive: {car.data.drive}</h3>
-                <h3>Make: {car.data.make}</h3>
-                <h3>Model: {car.data.model}</h3>
-                <h3>Year: {car.data.year}</h3>
-                <h3>Seats: {car.data.seats}</h3>
-                <h3>Color: {car.data.color}</h3>
-                <h3>Price: ${car.data.price} a day</h3>
+                <p>Drive: {car.data.drive}</p>
+                <p>Make: {car.data.make}</p>
+                <p>Model: {car.data.model}</p>
+                <p>Year: {car.data.year}</p>
+                <p>Seats: {car.data.seats}</p>
+                <p>Color: {car.data.color}</p>
+                <p>Price: ${car.data.price} a day</p>
 
             </div>
 

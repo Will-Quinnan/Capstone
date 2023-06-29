@@ -7,12 +7,9 @@ import StoreContext from "../store/storeContext";
 
 function Home() {
     const addInfo = useContext(StoreContext).addInfo;
-    const [info, setInfo] = useState({pUpLocation: '', pUpDate: '', pUpTime: '', dOffDate: '', dOffTime: ''});
+    const [info, setInfo] = useState({pUpLocation: '', pUpDate: '', pUpTime: '', dOffDate: '', dOffTime: '', dOffLocation: ''});
 
     const Search = () => {
-        // let copy = [...info]
-        // copy.push(info)
-        // setInfo(copy)
         addInfo(info);
     };
 
@@ -35,8 +32,8 @@ function Home() {
                     </div>
                     <select class="sep form-select form-select-lg input ps-5" aria-label="Default select example" onChange={e => setInfo({...info, pUpLocation: e.target.value})}>
                         <option selected>Pick-up location</option>
-                        <option value="dealership">Dealership</option>
-                        <option value="airport">San Diego Airport</option>
+                        <option value="Dealership">Dealership</option>
+                        <option value="San Diego Airport">San Diego Airport</option>
                     </select>
                 </div>
 
@@ -77,6 +74,17 @@ function Home() {
                         <option value="11 pm">23:00</option>
                     </select>
 
+                </div>
+
+                <div className="wrapper pb-1">
+                    <div className="icon">
+                        <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    </div>
+                    <select class="sep form-select form-select-lg input ps-5" aria-label="Default select example" onChange={e => setInfo({...info, dOffLocation: e.target.value})}>
+                        <option selected>Drop-off location</option>
+                        <option value="Dealership">Dealership</option>
+                        <option value="San Diego Airport">San Diego Airport</option>
+                    </select>
                 </div>
 
                 <div className="position-relative wrapper pb-1">

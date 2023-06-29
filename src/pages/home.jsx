@@ -1,22 +1,17 @@
 import "./home.css";
 import { Link } from 'react-router-dom'
-import DataService from "../services/dataService";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck, faMagnifyingGlass, faCalendarDays, faClock } from '@fortawesome/free-solid-svg-icons'
-import { useState } from "react";
+import { faCheck, faMagnifyingGlass, faClock } from '@fortawesome/free-solid-svg-icons'
+import { useContext, useState } from "react";
+import StoreContext from "../store/storeContext";
 
 function Home() {
-    const[value, setValue] = useState('');
+    const addInfo = useContext(StoreContext).addInfo;
+    const [info, setInfo] = useState({pUpLocation: '', pUpDate: '', pUpTime: '', dOffDate: '', dOffTime: '', dOffLocation: ''});
 
-    function search(event){
-        setValue(event.target.value)
-        console.log(value)
-    }
-
-    function loadCatalog(){
-        let service = new DataService();
-        service.getProducts();
-    }
+    const Search = () => {
+        addInfo(info);
+    };
 
     return (
     <div className = "home">
@@ -35,23 +30,23 @@ function Home() {
                     <div className="icon">
                         <FontAwesomeIcon icon={faMagnifyingGlass} />
                     </div>
-                    <select class="sep form-select form-select-lg input ps-5" aria-label="Default select example" onChange={search}>
+                    <select class="sep form-select form-select-lg input ps-5" aria-label="Default select example" onChange={e => setInfo({...info, pUpLocation: e.target.value})}>
                         <option selected>Pick-up location</option>
-                        <option value="dealership">Dealership</option>
-                        <option value="airport">San Diego Airport</option>
+                        <option value="Dealership">Dealership</option>
+                        <option value="San Diego Airport">San Diego Airport</option>
                     </select>
                 </div>
 
                 <div className="position-relative wrapper pb-1">
                     <label htmlFor="" className="position-absolute start-0 ps-5">Date Pick-up</label>
-                    <input class="sep form-control form-control-lg input ps-5" type="date" placeholder="Pick-up date" onChange={search}/>
+                    <input class="sep form-control form-control-lg input ps-5" type="date" placeholder="Pick-up date" onChange={e => setInfo({...info, pUpDate: e.target.value})}/>
                 </div>
 
                 <div className="wrapper pb-1">
                     <div className="icon">
                         <FontAwesomeIcon icon={faClock} />
                     </div>
-                    <select class="sep form-select form-select-lg input ps-5" aria-label="Default select example" id="floatingInput" onChange={search}>
+                    <select class="sep form-select form-select-lg input ps-5" aria-label="Default select example" id="floatingInput" onChange={e => setInfo({...info, pUpTime: e.target.value})}>
                         <option selected>Time Pick-up</option>
                         <option value="12 am">00:00</option>
                         <option value="1 am">01:00</option>
@@ -81,16 +76,27 @@ function Home() {
 
                 </div>
 
+                <div className="wrapper pb-1">
+                    <div className="icon">
+                        <FontAwesomeIcon icon={faMagnifyingGlass} />
+                    </div>
+                    <select class="sep form-select form-select-lg input ps-5" aria-label="Default select example" onChange={e => setInfo({...info, dOffLocation: e.target.value})}>
+                        <option selected>Drop-off location</option>
+                        <option value="Dealership">Dealership</option>
+                        <option value="San Diego Airport">San Diego Airport</option>
+                    </select>
+                </div>
+
                 <div className="position-relative wrapper pb-1">
                     <label htmlFor="" className="position-absolute start-0 ps-5">Date Drop-off</label>
-                    <input class="sep form-control form-control-lg input ps-5" type="date" placeholder="Drop-off date" onChange={search}/>
+                    <input class="sep form-control form-control-lg input ps-5" type="date" placeholder="Drop-off date" onChange={e => setInfo({...info, dOffDate: e.target.value})}/>
                 </div>
 
                 <div className="wrapper pb-1">
                     <div className="icon">
                         <FontAwesomeIcon icon={faClock} />
                     </div>
-                    <select class="sep form-select form-select-lg input ps-5" aria-label="Default select example" id="floatingInput" onChange={search}>
+                    <select class="sep form-select form-select-lg input ps-5" aria-label="Default select example" id="floatingInput" onChange={e => setInfo({...info, dOffTime: e.target.value})}>
                         <option selected>Time Drop-off</option>
                         <option value="12 am">00:00</option>
                         <option value="1 am">01:00</option>
@@ -118,12 +124,8 @@ function Home() {
                         <option value="11 pm">23:00</option>
                     </select>
                 </div>
-                
-                {/* Testing that react has communication with flask */}
-                {/* <button className="btn btn-success sep" onClick={loadCatalog}>Search</button> */}
             
-                {/* adding link for navigation until search funtionality is implimented */}
-                <Link className="btn btn-success sep p-3" to="/catalog">Search</Link>
+                <Link className="btn btn-success sep p-3" to="/catalog" onClick={Search}>Search</Link>
 
             </div>
             

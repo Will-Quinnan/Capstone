@@ -1,9 +1,15 @@
-import { useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./product.css"
 import { Link } from "react-router-dom";
+import StoreContext from "../store/storeContext";
 
 
 function Product(props) {
+    const carSpecs = useContext(StoreContext).carSpecs
+
+    const Info = () => {
+        carSpecs(props);
+    }
 
     useEffect(function(){
 
@@ -36,7 +42,7 @@ function Product(props) {
         </div>
 
         <div className="viewDeal">
-        <Link className="btn btn-secondary button-booking" to="/checkout">View Deal</Link>
+            <Link className="btn btn-secondary button-booking" to="/checkout" onClick={Info}>View Deal</Link>
         </div>
     </div>
 

@@ -14,20 +14,20 @@ function Login() {
         <div className="col border border-secondary border-2 rounded login-section">
 
             <h1>Manage my booking</h1>
-            <p>Fill in your details to confirm a quote- or to view change or cancel a booking</p>
+            <p>Fill in your details to confirm a quote or to view change.</p>
             
-            <div className="email">
-                <h4>Email</h4>
-                <input class="form-control form-control-lg" type="email" placeholder="Email here"/>
+            <div className="form-floating mb-3 email">
+                <input class="form-control form-control-lg" type="text" placeholder="Name here"/>
+                <label htmlFor="floatingInput">Name</label>
             </div>
 
-            <div className="booking-number">
-                <h4>Booking reference number</h4>
-                <input class="form-control form-control-lg" type="number" placeholder="Booking number"/>
+            <div className="form-floating mb-3 booking-number">
+                <input class="form-control form-control-lg" type="email" placeholder="Email here"/>
+                <label htmlFor="floatingInput">Email</label>
             </div>  
 
             <nav>
-                {/* adding link for navigation until book funtionality is implimented */}
+
                 <Link className="btn btn-secondary button-booking" to="/yourOrders">Find your booking</Link>
             </nav>
 

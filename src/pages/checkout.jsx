@@ -68,7 +68,7 @@ function Checkout() {
 
                 <div className="button">
                     {/* add place reservation button here */}
-                    <Link className="btn btn-success sep p-3" to="/" onClick={email}>Search</Link>
+                    <Link className="btn btn-success sep p-3" to="/" onClick={email}>Place order</Link>
                 </div>
 
             </div>

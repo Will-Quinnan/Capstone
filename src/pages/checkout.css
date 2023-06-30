@@ -52,19 +52,3 @@
     margin-left: 10px;
     
 }
-
-
-
-
-
-.checkout .email{
-    display: flex;
-    flex-direction: row;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    
-}
-.checkout .email input{
-    width: 70%;
-    
-}

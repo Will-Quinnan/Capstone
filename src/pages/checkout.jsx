@@ -36,23 +36,27 @@ function Checkout() {
 
 
     function tripDuration(){
-        
+
     };
 
     function priceCalc(){
+        let total = (daysDifference(searchInfo.pUpDate, searchInfo.dOffDate)*car.data.price); 
+        return total;
 
     };
 
     function insurCalc(){
-
+        let total = (daysDifference(searchInfo.pUpDate, searchInfo.dOffDate)*car.data.price)*.2; 
+        return total;
     };
 
     function taxCalc(){
-
+        let total = (priceCalc() + insurCalc())*.1;
+        return total
     };
 
     function totalPrice(){
-        let total = (daysDifference(searchInfo.pUpDate, searchInfo.dOffDate)*car.data.price) + 40; 
+        let total = priceCalc() + insurCalc() + taxCalc(); 
         return total;
     };
     
@@ -117,19 +121,19 @@ function Checkout() {
 
                     <div className="price-breakdown">
                         <div className="info-price">
-                        <p><u>Price for # days:</u> ${car.data.price}</p>
+                        <p><u>Price for {daysDifference(searchInfo.pUpDate, searchInfo.dOffDate)} days:</u> ${priceCalc().toFixed(2)}</p>
                         </div>
                         <div className="info-price">
-                        <p><u>Insurance fees:</u> $30</p>
+                        <p><u>Insurance fees:</u> ${insurCalc().toFixed(2)}</p>
                         </div>
                         <div className="info-price">
-                        <p><u>tax:</u> $10</p>
+                        <p><u>tax:</u> ${taxCalc().toFixed(2)}</p>
                         </div>
                     </div>
 
                     <div className="outer-layer">
                         <h3>Total Price:</h3> 
-                        <p>${totalPrice()}</p>
+                        <p>${totalPrice().toFixed(2)}</p>
                         {/* add total price of order */}
                     </div>
 

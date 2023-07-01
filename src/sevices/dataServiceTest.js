@@ -144,11 +144,7 @@ class DataService {
         return response.data;
     }
 
-    async getOrders(name, email) {
-        let user = {
-            name: name,
-            email: email
-        }
+    async getOrders(user) {
         let response = await axios.post("http://127.0.0.1:5000/api/retrieve_orders",user);        
         return response.data;
     }

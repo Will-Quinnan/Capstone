@@ -22,7 +22,7 @@ function YourOrder(){
 
     async function loadCars(){
         let service = new DataService();
-        let results = await service.getOrders(checkOut.name, checkOut.email)
+        let results = await service.getOrders(checkOut)
         setOrders(results);
         console.log(results);
     }
@@ -34,7 +34,7 @@ function YourOrder(){
 
             {orders.length < 1 ?
             (
-                <h1>You have not orders</h1>
+                <h1>You have no orders</h1>
             )            
             :
             (
@@ -70,7 +70,9 @@ function YourOrder(){
 
 
         </div>
+        
     );
 }
+
 
 export default YourOrder;

@@ -5,7 +5,7 @@
 .catalog-body{
     display: flex;
     flex-direction: row;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 .filter-tab{
     display: flex;
@@ -13,9 +13,14 @@
     width: 30%;
     border: solid rgba(63, 63, 63, 0.281) 1px;
     border-radius: 5px;
+    margin-top: 15px;
 }
 .catalog-products{
     display:flex;
     flex-direction: column;
     width: 70%;
+}
+
+.trip-info{
+    margin-bottom: 50px;
 }

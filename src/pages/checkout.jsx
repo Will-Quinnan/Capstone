@@ -36,23 +36,27 @@ function Checkout() {
 
 
     function tripDuration(){
-        
+
     };
 
     function priceCalc(){
+        let total = (daysDifference(searchInfo.pUpDate, searchInfo.dOffDate)*car.data.price); 
+        return total;
 
     };
 
     function insurCalc(){
-
+        let total = (daysDifference(searchInfo.pUpDate, searchInfo.dOffDate)*car.data.price)*.2; 
+        return total;
     };
 
     function taxCalc(){
-
+        let total = (priceCalc() + insurCalc())*.1;
+        return total
     };
 
     function totalPrice(){
-        let total = (daysDifference(searchInfo.pUpDate, searchInfo.dOffDate)*car.data.price) + 40; 
+        let total = priceCalc() + insurCalc() + taxCalc(); 
         return total;
     };
     
@@ -117,39 +121,41 @@ function Checkout() {
 
                     <div className="price-breakdown">
                         <div className="info-price">
-                        <p><u>Price for # days:</u> ${car.data.price}</p>
+                        <p><u>Price for {daysDifference(searchInfo.pUpDate, searchInfo.dOffDate)} days:</u> ${priceCalc().toFixed(2)}</p>
                         </div>
                         <div className="info-price">
-                        <p><u>Insurance fees:</u> $30</p>
+                        <p><u>Insurance fees:</u> ${insurCalc().toFixed(2)}</p>
                         </div>
                         <div className="info-price">
-                        <p><u>tax:</u> $10</p>
+                        <p><u>tax:</u> ${taxCalc().toFixed(2)}</p>
                         </div>
                     </div>
 
                     <div className="outer-layer">
                         <h3>Total Price:</h3> 
-                        <p>${totalPrice()}</p>
+                        <p>${totalPrice().toFixed(2)}</p>
                         {/* add total price of order */}
                     </div>
 
                 </div>
 
 
-                <div className="form-floating mb-4 mt-4 ps-1 pe-2 name">
-                    <input className="form-control" type="text" onChange={e => setUser({...user, name: e.target.value})} placeholder="Name here" />
-                    <label htmlFor="floatingInput">Name</label>
+                <div className="name">
+                    {/* add email text box here */}
+                    <label htmlFor="">Name:</label>
+                    <input type="text" onChange={e => setUser({...user, name: e.target.value})}/>
                 </div>
 
-                <div className="form-floating mb-4 mt-4 ps-1 pe-2 email">
-                    <input className="form-control" type="email" onChange={e => setUser({...user, email: e.target.value})} placeholder="Email here" />
-                    <label htmlFor="floatingInput">Email</label>
+                <div className="email">
+                    {/* add email text box here */}
+                    <label htmlFor="">Email:</label>
+                    <input type="email" onChange={e => setUser({...user, email: e.target.value})}/>
                 </div>
 
 
                 <div className="button">
                     {/* add place reservation button here */}
-                    <Link className="btn btn-success sep p-3" to="/" onClick={email}>Place order</Link>
+                    <Link className="btn btn-success sep p-3" to="/" onClick={email}>Book</Link>
                 </div>
 
             </div>

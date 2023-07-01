@@ -15,9 +15,6 @@ function Checkout() {
     };
 
 
-    function tripDuration(){
-
-    };
 
     function priceCalc(){
 
@@ -115,20 +112,22 @@ function Checkout() {
                 </div>
 
 
-                <div className="form-floating mb-4 mt-4 ps-1 pe-2 name">
-                    <input className="form-control" type="text" onChange={e => setUser({...user, name: e.target.value})} placeholder="Name here" />
-                    <label htmlFor="floatingInput">Name</label>
+                <div className="name">
+                    {/* add email text box here */}
+                    <label htmlFor="">Name:</label>
+                    <input type="text" onChange={e => setUser({...user, name: e.target.value})}/>
                 </div>
 
-                <div className="form-floating mb-4 mt-4 ps-1 pe-2 email">
-                    <input className="form-control" type="email" onChange={e => setUser({...user, email: e.target.value})} placeholder="Email here" />
-                    <label htmlFor="floatingInput">Email</label>
+                <div className="email">
+                    {/* add email text box here */}
+                    <label htmlFor="">Email:</label>
+                    <input type="email" onChange={e => setUser({...user, email: e.target.value})}/>
                 </div>
 
 
                 <div className="button">
                     {/* add place reservation button here */}
-                    <Link className="btn btn-success sep p-3" to="/" onClick={email}>Place order</Link>
+                    <Link className="btn btn-success sep p-3" to="/" onClick={email}>Search</Link>
                 </div>
 
             </div>

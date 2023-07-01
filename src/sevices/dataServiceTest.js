@@ -139,6 +139,19 @@ class DataService {
         return response.data;
     }
 
+    async saveOrder(order) {
+        let response = await axios.post("http://127.0.0.1:5000/api/order", order);
+        return response.data;
+    }
+
+    async getOrders(name, email) {
+        let user = {
+            name: name,
+            email: email
+        }
+        let response = await axios.post("http://127.0.0.1:5000/api/retrieve_orders",user);        
+        return response.data;
+    }
 }
 
 

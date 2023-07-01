@@ -4,7 +4,7 @@ import StoreContext from "./storeContext";
 const GlobalState = (props) => {
     const [car, setCar] = useState({});
     const [searchInfo, setSearchInfo] = useState({});
-    const [user, setUser] = useState({})
+    const [user, setUser] = useState({});
     const [checkOut, setCheckOut] = useState({});
 
     const addInfo = (info) => {
@@ -21,8 +21,9 @@ const GlobalState = (props) => {
         console.log(user);
     };
 
-    const checkOutInfo = () => {
-
+    const checkOutInfo = (info) => {
+        setCheckOut(info)
+        console.log(checkOut);
     };
 
     return(

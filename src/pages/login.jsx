@@ -16,12 +16,12 @@ function Login() {
             <h1>Manage my booking</h1>
             <p>Fill in your details to confirm a quote or to view change.</p>
             
-            <div className="form-floating mb-3 email">
+            <div className="form-floating mb-3 name">
                 <input class="form-control form-control-lg" type="text" placeholder="Name here"/>
                 <label htmlFor="floatingInput">Name</label>
             </div>
 
-            <div className="form-floating mb-3 booking-number">
+            <div className="form-floating mb-3 email">
                 <input class="form-control form-control-lg" type="email" placeholder="Email here"/>
                 <label htmlFor="floatingInput">Email</label>
             </div>  

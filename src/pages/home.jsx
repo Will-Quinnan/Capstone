@@ -4,33 +4,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck, faMagnifyingGlass, faClock } from '@fortawesome/free-solid-svg-icons'
 import { useContext, useState } from "react";
 import StoreContext from "../store/storeContext";
-import Form from "react-bootstrap/Form";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import  InputGroup  from "react-bootstrap/InputGroup";
-import Button from "react-bootstrap/Button"
+
 
 function Home() {
     const addInfo = useContext(StoreContext).addInfo;
     const [info, setInfo] = useState({pUpLocation: '', pUpDate: '', pUpTime: '', dOffDate: '', dOffTime: '', dOffLocation: ''});
-    const [validated, setValidated] = useState(false);
 
     const Search = () => {
         addInfo(info);
     };
 
-    const handleSubmit = (event) => {
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-    
-        setValidated(true);
-      };
-
     return (
-        <Form noValidate validated={validated} onSubmit={handleSubmit}>
             <div className = "home">
 
                 <div className="site-info">
@@ -39,25 +23,19 @@ function Home() {
                     <h4><FontAwesomeIcon icon={faCheck} /> Customer support</h4>
                 </div>
 
-
                 <div className="container">
                     <div className="inputs">
 
-                        <Form.Group>
-                            <div className="wrapper pb-1">
-                                <div className="icon">
-                                    <FontAwesomeIcon icon={faMagnifyingGlass} />
-                                </div>
-                                <select class="sep form-select form-select-lg input ps-5" aria-label="Default select example" required onChange={e => setInfo({...info, pUpLocation: e.target.value})}>
-                                    <option selected disabled value="">Pick-up location</option>
-                                    <option value="Dealership">Dealership</option>
-                                    <option value="San Diego Airport">San Diego Airport</option>
-                                </select>
+                        <div className="wrapper pb-1">
+                            <div className="icon">
+                                <FontAwesomeIcon icon={faMagnifyingGlass} />
                             </div>
-                            <Form.Control.Feedback>
-                                Please provide a Pick-Up location
-                            </Form.Control.Feedback>
-                        </Form.Group>
+                            <select class="sep form-select form-select-lg input ps-5" aria-label="Default select example" required onChange={e => setInfo({...info, pUpLocation: e.target.value})}>
+                                <option selected disabled value="">Pick-up location</option>
+                                <option value="Dealership">Dealership</option>
+                                <option value="San Diego Airport">San Diego Airport</option>
+                            </select>
+                        </div>
 
                         <div className="position-relative wrapper pb-1">
                             <label htmlFor="" className="position-absolute start-0 ps-5">Date Pick-up</label>
@@ -148,7 +126,6 @@ function Home() {
                         </div>
                     
                         <Link className="btn btn-success sep p-3" to="/catalog" onClick={Search}>Search</Link>
-                        {/* <button className="btn btn-sucess sep p-3 position-relative" >Search</button> We have to implement the validation*/} 
 
                     </div>
                     
@@ -156,7 +133,6 @@ function Home() {
 
             </div>
                 
-        </Form>
 
     );
 }

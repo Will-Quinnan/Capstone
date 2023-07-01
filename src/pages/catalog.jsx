@@ -42,7 +42,7 @@ function Catalog(){
     }
 
     return (
-        <div className="catalog">
+        <div className="container catalog">
 
             <div className="trip-info">
                 <TripInfo></TripInfo>

@@ -30,7 +30,7 @@ function Filters(props) {
             
                 <div className="filter-type"  onChange={filterYear}>
 
-                    <div className="filter"> 
+                        <div className="filter"> 
                             <input
                                 type="radio"
                                 name="react-radio-btn"

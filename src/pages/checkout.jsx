@@ -2,19 +2,42 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import StoreContext from "../store/storeContext";
 import './checkout.css';
+import DataService from "../sevices/dataServiceTest";
 
 
 
 function Checkout() {
     const car = useContext(StoreContext).car;
+    const searchInfo = useContext(StoreContext).searchInfo;
     const userInfo = useContext(StoreContext).userInfo;
     const [user, setUser] = useState({name: "", email: "" });
 
-    function email(){
+    async function email(){
         userInfo(user);
+
+        const order = {            
+            car: car.data,
+            name: user.name,
+            email: user.email
+        }
+
+        let service = new DataService();
+        let results = await service.saveOrder(order);
+        console.log(results);
     };
 
+    function daysDifference(firstDate, secondDate){
+        var startDay = new Date(firstDate);
+        var endDay = new Date(secondDate);
+        var millisBetween = startDay.getTime() - endDay.getTime();
+        var days = millisBetween / (1000 * 3600 * 24);
+        return Math.round(Math.abs(days));
+    }
 
+
+    function tripDuration(){
+        
+    };
 
     function priceCalc(){
 
@@ -29,7 +52,8 @@ function Checkout() {
     };
 
     function totalPrice(){
-
+        let total = (daysDifference(searchInfo.pUpDate, searchInfo.dOffDate)*car.data.price) + 40; 
+        return total;
     };
     
     
@@ -96,16 +120,16 @@ function Checkout() {
                         <p><u>Price for # days:</u> ${car.data.price}</p>
                         </div>
                         <div className="info-price">
-                        <p><u>Insurance fees:</u> $###</p>
+                        <p><u>Insurance fees:</u> $30</p>
                         </div>
                         <div className="info-price">
-                        <p><u>tax:</u> $###</p>
+                        <p><u>tax:</u> $10</p>
                         </div>
                     </div>
 
                     <div className="outer-layer">
                         <h3>Total Price:</h3> 
-                        <p>$###</p>
+                        <p>${totalPrice()}</p>
                         {/* add total price of order */}
                     </div>
 

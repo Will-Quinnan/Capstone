@@ -11,6 +11,7 @@ function Checkout() {
     const searchInfo = useContext(StoreContext).searchInfo;
     const userInfo = useContext(StoreContext).userInfo;
     const [user, setUser] = useState({name: "", email: "" });
+    const [total, setTotal] = useState('');
 
     async function email(){
         userInfo(user);
@@ -18,7 +19,8 @@ function Checkout() {
         const order = {            
             car: car.data,
             name: user.name,
-            email: user.email
+            email: user.email,
+            searchInfo: searchInfo
         }
 
         let service = new DataService();
@@ -36,7 +38,7 @@ function Checkout() {
 
 
     function tripDuration(){
-
+        
     };
 
     function priceCalc(){
@@ -140,16 +142,16 @@ function Checkout() {
                 </div>
 
 
-                <div className="name">
+                <div className="form-floating mb-3 name">
                     {/* add email text box here */}
-                    <label htmlFor="">Name:</label>
-                    <input type="text" onChange={e => setUser({...user, name: e.target.value})}/>
+                    <input className="form-control" type="text" placeholder="Name" onChange={e => setUser({...user, name: e.target.value})}/>
+                    <label htmlFor="floatingInput">Name</label>
                 </div>
 
-                <div className="email">
+                <div className="form-floating email">
                     {/* add email text box here */}
-                    <label htmlFor="">Email:</label>
-                    <input type="email" onChange={e => setUser({...user, email: e.target.value})}/>
+                    <input className="form-control" type="email" placeholder="Email" onChange={e => setUser({...user, email: e.target.value})}/>
+                    <label htmlFor="floatingInput">Email</label>
                 </div>
 
 

@@ -4,8 +4,6 @@ import StoreContext from '../store/storeContext';
 import DataService from '../sevices/dataServiceTest';
 
 function YourOrder(){
-    const car = useContext(StoreContext).car;
-    const searchInfo = useContext(StoreContext).searchInfo;
     const checkOut = useContext(StoreContext).checkOut;
     const [orders, setOrders] = useState([]);
 
@@ -55,14 +53,14 @@ function YourOrder(){
                             <p><b>Color:</b> {order.car.color}</p>
                         </div>
 
-                        {/* <div className='info col'>
-                            <p><b>Pick-Up Location:</b> {order.pUpLocation}</p>
-                            <p><b>Date Pick-Up:</b> {order.pUpDate}</p>
-                            <p><b>Time Pick-Up:</b> {order.pUpTime}</p>
-                            <p><b>Drop-Off Location:</b> {order.dOffLocation}</p>
-                            <p><b>Date Drop-Off:</b> {order.dOffDate}</p>
-                            <p><b>Time Drop-Off:</b> {order.dOffTime}</p>
-                        </div> */}
+                         <div className='info col'>
+                            <p><b>Pick-Up Location:</b> {order.searchInfo.pUpLocation}</p>
+                            <p><b>Date Pick-Up:</b> {order.searchInfo.pUpDate}</p>
+                            <p><b>Time Pick-Up:</b> {order.searchInfo.pUpTime}</p>
+                            <p><b>Drop-Off Location:</b> {order.searchInfo.dOffLocation}</p>
+                            <p><b>Date Drop-Off:</b> {order.searchInfo.dOffDate}</p>
+                            <p><b>Time Drop-Off:</b> {order.searchInfo.dOffTime}</p>
+                        </div> 
                     </div>
 
                 )
